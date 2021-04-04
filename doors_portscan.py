@@ -122,7 +122,7 @@ def main():
                 sleep(1)
                 os.system('cls' if os.name == 'nt' else 'clear')
             if dict_scan in [default_ports, user_predef, user_loaded]:
-                show_ports = input(bold('\n[---] Do you wish to show CLOSED PORTS [y/n]?\n>> ')).upper()
+                show_ports = input(bold('\n[---] Do you wish to show CLOSED PORTS [y/n]?\n[>>>] ')).upper()
                 print(bold('\n[-_*] INITIALIZING'))
                 if ',' in domain:
                     try:
@@ -261,7 +261,7 @@ def scan(domain, show_ports, ports):
             sock.settimeout(0.5)
             result = sock.connect_ex((domain, port[1]))
             sock.close()
-            if show_ports == 'S':
+            if show_ports == 'Y':
                 if result == 0:
                     if len(str(port[1])) < 3:
                         length = 3 - len(str(port[1]))

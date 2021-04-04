@@ -38,7 +38,7 @@ final_text = []
 
 def delayed_print(text):
     for char in text:
-        sleep(0.05)
+        sleep(0.02)
         sys.stdout.write(char)
         sys.stdout.flush()
 
